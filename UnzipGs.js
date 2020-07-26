@@ -41,9 +41,9 @@ function getFilenames(blob, options) {
 
     UnzipGs.prototype.Unzip = function(blob_, options_) {
       var e, er, err, fileNames, ref, result, unzip;
-      if (blob_.toString() !== "Blob") {
-        throw new Error("Please set a file blob of zip file.");
-      }
+      // if (blob_.toString() !== "Blob") {
+      //  throw new Error("Please set a file blob of zip file.");
+      // }
       if (!options_ || Object.keys(options_).length === 0 || !options_.password || !("password" in options_)) {
         return Utilities.unzip(blob_);
       }
